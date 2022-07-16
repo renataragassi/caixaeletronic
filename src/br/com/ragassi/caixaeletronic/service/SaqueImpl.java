@@ -17,14 +17,14 @@ public class SaqueImpl implements Saque {
     public double execute(double valorASerSacado, int numeroDaConta) {
 
         Conta conta;
-        conta = repository.findById(numeroDaConta);
+        conta = repository.findByID(numeroDaConta);
         boolean saqueRealizado = conta.retirarSaldo(valorASerSacado);
         if (saqueRealizado) {
             System.out.printf("Saque realizado! Seu saldo atual é de R$ %.2f! %n", conta.getSaldo());
+
+            return valorASerDepositado;
+
         }
-
-        return valorASerSacadoSacado;
-
     }
-}
+
 

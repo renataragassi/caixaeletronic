@@ -5,6 +5,8 @@ public class Conta {
     private int numeroDaConta;
     private double saldo;
 
+    private String transferencia;
+
     public Conta() {
         saldo = 0;
     }
@@ -27,6 +29,16 @@ public class Conta {
 
         saldo = saldo + valorASerAdicionado;
     }
+
+
+    public String getTransferencia() {
+        return transferencia;
+    }
+
+    public void setTransferencia(String transferencia) {
+        this.transferencia = transferencia;
+    }
+
 
     public boolean retirarSaldo (double valorASerRetirado){
         if (saldo >= valorASerRetirado) {
