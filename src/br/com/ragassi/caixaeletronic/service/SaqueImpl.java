@@ -7,18 +7,23 @@ import br.com.ragassi.caixaeletronic.repository.MemoriaContaRepository;
 public class SaqueImpl implements Saque {
 
     private final MemoriaContaRepository repository;
+
     public SaqueImpl(MemoriaContaRepository repository) {
         this.repository = repository;
 
     }
+
     @Override
-    public double execute(double valorSacado, int numeroDaConta) {
+    public double execute(double valorASerSacado, int numeroDaConta) {
 
         Conta conta;
         conta = repository.findById(numeroDaConta);
-        conta.retirarSaldo();
-        System.out.printf("Saque realizado! Seu saldo atual é de R$ %.2f! %n", conta.getSaldo());
-        return valorSacado;
+        boolean saqueRealizado = conta.retirarSaldo(valorASerSacado);
+        if (saqueRealizado) {
+            System.out.printf("Saque realizado! Seu saldo atual é de R$ %.2f! %n", conta.getSaldo());
+        }
+
+        return valorASerSacadoSacado;
 
     }
 }
