@@ -14,14 +14,12 @@ public class DepositoImpl implements Deposito{
 
 
     @Override
-    public double execute(double valorDepositado, int numeroDaConta) {
+    public double execute(double valorASerDepositado, int numeroDaConta) {
         Conta conta;
-        BaseRepository<Object> repository = null;
-
-        conta = repository.findById(numeroDaConta);
-        conta.adicionaSaldo(valorDepositado);
+        conta = repository.findByID(numeroDaConta);
+        conta.adicionaSaldo(valorASerDepositado);
         System.out.printf("Depósito realizado! Seu saldo atual é de R$ %.2f)!%n", conta.getSaldo());
-        return valorDepositado;
+        return valorASerDepositado;
     }
 
 }

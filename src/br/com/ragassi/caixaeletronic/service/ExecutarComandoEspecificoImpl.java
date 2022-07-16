@@ -10,13 +10,16 @@ import java.util.Scanner;
         private final AbrirConta abrirConta;
         private final Saque saque;
 
+        private final Transferencia transferencia;
 
         public ExecutarComandoEspecificoImpl() {
             MemoriaContaRepository repository = new MemoriaContaRepository ();
             this.deposito = new DepositoImpl(repository);
             this.saque = new SaqueImpl(repository);
             this.abrirConta = new AbrirContaImpl(repository);
-        }
+            this.transferencia = new TransferenciaImpl(repository);
+            }
+
 
         @Override
         public boolean execute(int comando) {

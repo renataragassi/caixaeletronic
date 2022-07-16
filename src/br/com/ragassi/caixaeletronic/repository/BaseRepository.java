@@ -14,5 +14,5 @@ public interface BaseRepository<T> {
     void adiciona(T objeto);
 
 
-    Conta findById(int i);
+
 }

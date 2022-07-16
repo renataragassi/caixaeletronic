@@ -10,5 +10,6 @@ public class ListarComandosImpl implements ListarComandos {
         System.out.println(" Opção 1 para Saque" );
         System.out.println(" Opção 2 para Depósito ");
         System.out.println(" Opção 3 para Abertura de Conta ");
+        System.out.println(" Opção 4 para Transferência ");
     }
     }

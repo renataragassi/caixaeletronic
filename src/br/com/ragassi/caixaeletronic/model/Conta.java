@@ -11,6 +11,7 @@ public class Conta {
 
     public int getNumeroDaConta() {
         return numeroDaConta;
+
     }
 
     public void setNumeroDaConta(int numeroDaConta) {
@@ -18,10 +19,12 @@ public class Conta {
     }
 
     public double getSaldo() {
+
         return saldo;
     }
 
     public void adicionaSaldo(double valorASerAdicionado) {
+
         saldo = saldo + valorASerAdicionado;
     }
 

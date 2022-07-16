@@ -13,11 +13,13 @@ public class MemoriaContaRepository implements BaseRepository<Conta>{
     @Override
     public List<Conta> findAll() {
         return contas;
+
     }
 
     @Override
     public Conta findByID(int id) {
         return contas.get(id);
+
     }
 
     @Override
@@ -27,12 +29,9 @@ public class MemoriaContaRepository implements BaseRepository<Conta>{
 
     }
 
-    @Override
-    public Conta findById(int i) {
-        return null;
     }
 
-}
+
 
 
 
